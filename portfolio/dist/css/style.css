@@ -1,10 +1,10 @@
-:root{
+:root {
     --bg: #2b374b;
     --bg-firt: #2f3b50;
     --bg-second: #313f55;
     --bg-third: #313f55;
     --t-color: #e7e7e7;
-    --blue:#1e8fffcb;
+    --blue: #1e8fffcb;
 }
 
 * {
@@ -13,15 +13,15 @@
     border: none;
     outline: none;
     text-decoration: none;
+    list-style: none;
     font-size: 10px;
     color: var(--t-color);
     transition: 0.2s linear;
     font-family: "Poppins", serif;
 }
 
-body{
-    
-   background: var(--bg-third);
+body {
+    background: var(--bg-third);
 }
 
 .interface {
@@ -35,27 +35,27 @@ body{
 .btn {
     color: var(--t-color);
     background: var(--blue);
-    padding: 10px 18px;
+    padding: 15px 18px;
     font-size: 24px;
-    border-radius: 5px;
+    text-align: center;
+    border-radius: 9px;
+    margin: 15px 0;
     display: inline-block;
 }
 
 .btn:hover {
     color: var(--t-color);
-    font-size: 26px;
+    transform: scale(1.05);
     background: var(--blue);
     cursor: pointer;
-
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     font-size: 34px;
-    margin: 10px 0px;
-    padding: 30px 0px;
-   
+    margin: 10px 0;
+    padding: 30px 0;
 }
 
 /*--------------header----------------- */
@@ -71,7 +71,7 @@ header {
 }
 
 header .interface a img {
-    padding: 0px 5px;
+    padding: 0 5px;
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -84,7 +84,7 @@ header .interface .navbar {
 }
 
 header .interface .navbar a {
-    margin: 0px 10px;
+    margin: 0 10px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -96,27 +96,26 @@ header .interface .navbar a:hover {
     border-bottom: 2px solid var(--blue);
 }
 
-header .interface .mobile-icon{
-    padding: 0px 5px;
+header .interface .mobile-icon {
+    padding: 0 5px;
     display: none;
 }
 
-header .mobile-navbar{
+header .mobile-navbar {
     display: none;
 }
 
 header .mobile-navbar .mobile-navbar-items {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 15px;
 }
 
 header .mobile-navbar .mobile-navbar-items a {
-    margin: 0px 10px;
-    font-size: 18px;
+    margin: 0 10px;
     font-weight: bold;
+    font-size: 18px;
     width: 100%;
     text-align: center;
     padding: 10px;
@@ -143,17 +142,19 @@ section .interface {
     background: var(--bg-firt);
 }
 
-#home .interface{
+#home .interface {
     display: grid;
     align-items: center;
+    text-align: justify;
     height: 90vh;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
 }
 
 section .interface .text-home {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     padding: 5px;
-    max-width: 600px;
-    
 }
 
 section .interface .text-home h1 {
@@ -164,253 +165,359 @@ section .interface .text-home span {
     font-size: 36px;
     color: var(--blue);
 }
+
 section .interface .text-home p {
     font-size: 24px;
-    margin: 15px 0px;
+    margin: 15px 0;
     text-align: start;
 }
 
+section .interface .photo-home img {
+    height: 360px;
+    width: 360px;
+    border-radius: 50%;
+}
+
+section .interface .photo-home {
+    padding: 5px;
+}
+
 section .title span {
-    padding: 0px 10px;
+    padding: 0 10px;
     font-size: 34px;
     color: var(--blue);
 }
 
 /*--------------about----------------- */
 
-#about{
+#about {
     background: var(--bg-second);
 }
 
-#about .interface{
+#about .interface {
     display: grid;
-    justify-content: center;
-    gap: 10px;
-    grid-template-columns: 1fr 2fr;
-
+    text-align: justify;
+    grid-template-columns: 1fr;
 }
 
-section .interface .photo-about{
-    padding: 5px;
-}
-
-section .interface .photo-about img{
-    height: 380px;
-    width: 360px;
-    border-radius: 20px;
-}
-
-section .interface .text-about{
+section .interface .text-about {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     padding: 5px;
 }
 
 section .interface .text-about p {
     font-size: 22px;
-    margin: 15px 0px;
+    margin: 15px 0;
+}
+
+section .interface .text-about a {
+    align-self: center;
 }
 
 /*--------------technologics----------------- */
 
-#technologics .interface{
-    display: grid;
-    gap: 10px;
-  
-    grid-template-columns: 1fr 1fr 1fr;
-
-}
-
-#technologics{
+#technologics {
     background: var(--bg-second);
 }
 
-#technologics .title span{
-    padding: 0px;
-
+#technologics .title span {
+    padding: 0;
 }
 
-.tech-box{
+#technologics .interface {
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.tech-box {
+    margin: 20px 0;
     padding: 5px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
-.tech-box:hover{
-    border-radius: 10px;
-}
-
-.tech-box .text-technologics h2{
-    color: var(--blue);
-    font-size: 30px;
-    margin: 10px 0px;
-}
-
-.tech-box .text-technologics p{
-    font-size: 22px;
+.text-technologics {
+    align-self: center;
 }
 
 /*--------------projects----------------- */
 
-#projects{
-   background: var(--bg-third);
+#projects {
+    background: var(--bg-third);
 }
 
-#projects .interface .project{
+#projects .title span {
+    padding: 0;
+}
+
+#projects .interface {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-#projects .interface{
-    display: grid;
+section .interface .project {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#projects .title span{
-    padding: 0px;
-}
-
-section .interface .project{
+    width: 350px;
     padding: 5px;
+    text-align: justify;
 }
 
-section .interface .project .photo-project img{
+section .interface .project .photo-project img {
     width: 350px;
     height: 230px;
     border-radius: 20px;
 }
 
-section .interface .project .text-project h3{
+section .interface .project .text-project h2 {
     color: var(--blue);
     font-size: 30px;
 }
 
-section .interface .project .text-project p{
+section .interface .project .text-project p {
     font-size: 22px;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 /*--------------contact----------------- */
 
-#contact{
+#contact {
     background: var(--bg-third);
 }
 
-#contact .interface{
+#contact .title span {
+    padding: 0;
+}
+
+#contact .interface {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
 }
 
-#contact .title span{
-    padding: 0px;
-}
-
-section .interface .text-info-contact{
-    padding: 5px;
-}
-
-section .interface .text-info-contact h2{
-    color: var(--blue);
-    font-size: 30px;
-}
-
-section .interface .text-info-contact p{
-    font-size: 22px;
-    margin: 10px 0px;
-}
-
-section .interface .text-contact{
+section .interface .text-info-contact {
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
 
-
-section .interface .text-contact span{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0px;
+section .interface .text-info-contact h2 {
+    color: var(--blue);
+    font-size: 30px;
 }
 
-section .interface .text-contact span p{
-    font-size: 5vw;
-    gap: 10px;
+section .interface .text-info-contact p {
     font-size: 22px;
-    margin: 10px 0px;
+    margin: 10px 0;
+}
+
+section .interface .text-contact {
+    padding: 5px;
+}
+
+section .interface .text-contact span {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+section .interface .text-contact span p {
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+section .interface .text-contact span .p-mobile-email {
+    display: none;
 }
 
 /*--------------footer----------------- */
 
-footer{
+footer {
     padding: 10px;
     background: var(--bg);
 }
 
-footer .interface{
-    justify-content: center;
+footer .interface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     padding: 5px;
 }
 
-footer .interface a svg{
-    margin: 5px;
+footer .interface .credits p {
+    font-size: 22px;
+    padding: 5 0px;
 }
 
-footer .interface a svg:hover{
-    width: 52px;
-    height: 52px;
+footer .interface .credits p a {
+    border-bottom: 0.2px solid var(--t-color);
+    font-size: 22px;
 }
 
-@media only screen and (max-width: 1024px){
+footer .interface ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+}
 
-    #about .interface{
-        display: grid; 
+footer .interface ul li a svg {
+    margin: 0 5px;
+}
+
+footer .interface ul li a svg:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1200px) {
+
+    section .interface .project {
+        width: 310px;
+    }
+
+    section .interface .project .photo-project img {
+        width: 310px;
+        height: 220px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .btn {
+        margin: 10px 0;
+    }
+
+    .title {
+        font-size: 30px;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    section .title span {
+        font-size: 30px;
+    }
+
+    #home .interface {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    section .interface .text-home h1 {
+        font-size: 30px;
+    }
+
+    section .interface .text-home span {
+        font-size: 30px;
+        color: var(--blue);
+    }
+
+    section .interface .text-home p {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    section .interface .photo-home img {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+
+    #about .interface {
         grid-template-columns: 1fr;
     }
 
-    #contact .interface{
-        display: grid;
-        gap: 10px;
+    section .interface .text-about p {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    #projects .interface {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section .interface .project .text-project h2 {
+        font-size: 28px;
+    }
+
+    section .interface .project .text-project p {
+        font-size: 20px;
+    }
+
+    #contact .interface {
         grid-template-columns: 1fr;
     }
-    #projects .interface{
-        display: grid;
-        gap: 10px;
+
+    section .interface .text-info-contact h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    section .interface .text-info-contact p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    section .interface .text-contact span {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section .interface .text-contact span p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    footer .interface {
         grid-template-columns: 1fr;
     }
+
+    footer .interface .credits {
+        grid-row: 2;
+    }
+
+    footer .interface .credits p {
+        padding: 5px 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    footer .interface .credits p a {
+        font-size: 20px;
+    }
+
+    footer .interface ul li {
+        padding: 0 2px;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
 
     .btn {
-        color: var(--t-color);
-        background: var(--blue);
-        padding: 8px 18px;
+        padding: 10px 12px;
         font-size: 18px;
-        border-radius: 5px;
-        display: inline-block;
-    }
-    
-    .btn:hover {
-        color: var(--t-color);
-        font-size: 20px;
-        background: var(--blue);
-        cursor: pointer;
-    
+        border-radius: 7px;
+        margin: 10px 0;
     }
 
-    .title{
+    .title {
         font-size: 30px;
-        margin: 10px 0px;
-        padding: 0px;
+        margin: 10px 0;
+        padding: 0;
     }
 
     section .title span {
-    font-size: 30px;
+        font-size: 30px;
     }
 
     header .interface a img {
-        padding: 0px;
+        padding: 0;
         height: 35px;
         width: 35px;
         border-radius: 50%;
@@ -420,126 +527,144 @@ footer .interface a svg:hover{
         display: none;
     }
 
-    header .interface .mobile-icon{
+    header .interface .mobile-icon {
         padding: 0px;
-        display: none;
-    }
-
-    header .interface .mobile-icon{
         display: block;
     }
 
-    header .mobile-navbar.show{
+    header .mobile-navbar.show {
         display: block;
     }
-    
-    header .mobile-navbar .mobile-navbar-items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 
-    #home .interface{
-        display: grid;
-        height: 85vh;
+    #home .interface {
         grid-template-columns: 1fr;
+        height: 85vh;
+    }
+
+    section .interface .text-home {
+        align-items: center;
+    }
+
+    section .interface .photo-home {
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    section .interface .photo-home img {
+        height: 155px;
+        width: 155px;
     }
 
     section .interface .text-home h1 {
         font-size: 30px;
     }
-    
+
     section .interface .text-home span {
         font-size: 30px;
     }
+
     section .interface .text-home p {
-        font-size: 20px;
+        text-align: justify;
+        font-size: 18px;
+        margin: 10px 0;
     }
 
-    #about .interface{
+    #about .interface {
         display: grid;
         grid-template-columns: 1fr;
-    
     }
 
     section .interface .text-about p {
+        text-align: justify;
         font-size: 17px;
+        margin: 10px 0;
     }
 
-    section .interface .photo-about img{
-        height: 380px;
-        width: 330px;
+    section .interface .text-about a {
+        text-align: center;
     }
 
-    #technologics .interface{
-        display: grid;
-        gap: 10x;
-        grid-template-columns: 1fr;
-    }
-    
-    .tech-box .text-technologics h2{
-        font-size: 28px;
-    }
-    
-    .tech-box .text-technologics p{
-        font-size: 17px;
+    #technologics .interface {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    #projects .interface{
-        display: grid;
-        gap: 10px;
+    #projects .interface {
         grid-template-columns: 1fr;
     }
 
-    section .interface .project{
-        margin: 5px 0px;
+    section .interface .project {
+        justify-self: center;
+        text-align: center;
+        margin: 5px 0;
     }
 
-    section .interface .project .photo-project img{
+    section .interface .project .photo-project img {
         width: 310px;
         height: 220px;
         border-radius: 20px;
     }
 
-    section .interface .project .text-project h3{
+    section .interface .project .text-project h2 {
         font-size: 28px;
     }
-    
-    section .interface .project .text-project p{
+
+    section .interface .project .text-project p {
         font-size: 17px;
     }
-    
-    #contact .interface{
-        display: grid;
-        gap: 10px;
+
+    #contact .interface {
         grid-template-columns: 1fr;
     }
 
-    section .interface .text-info-contact h2{
+    section .interface .text-info-contact h2 {
+        text-align: center;
         font-size: 28px;
     }
-    
-    section .interface .text-info-contact p{
+
+    section .interface .text-info-contact p {
+        text-align: center;
         font-size: 17px;
     }
 
-    section .interface .text-contact span{
-        display: inline-block;
+    section .interface .text-contact span {
         flex-direction: column;
-        align-items: start;
-        gap: 10px;
-        margin: 10px 0px;
+        justify-content: center;
     }
-    
-    section .interface .text-contact span p{
+
+    section .interface .text-contact span p {
+        text-align: center;
+        font-size: 17px;
+        margin: 0 5px;
+    }
+
+    section .interface .text-contact span .p-email {
+        display: none;
+    }
+
+    section .interface .text-contact span .p-mobile-email {
+        display: block;
+    }
+
+    footer .interface {
+        grid-template-columns: 1fr;
+    }
+
+    footer .interface .credits {
+        grid-row: 2;
+    }
+
+    footer .interface .credits p {
+        padding: 5px 0;
+        text-align: center;
         font-size: 17px;
     }
-    
-    footer .interface{
-        flex-direction: row;
-        justify-content: center;
-        padding: 5px;
+
+    footer .interface .credits p a {
+        font-size: 17px;
     }
- 
+
+    footer .interface ul li {
+        padding: 0 2px;
+    }
+
 }
